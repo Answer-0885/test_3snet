@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MONTH_NAMES, type ApiResponse } from "./api/types";
+import { MONTH_NAMES, type ApiResponse } from "./types/types";
 
 
 const App: React.FC = () => {
