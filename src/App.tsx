@@ -1,32 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { MONTH_NAMES, type ApiResponse } from "./api/types";
 
-interface MonthData {
-  income: number;
-  activePartners: number;
-  plan: {
-    income: number;
-    activePartners: number;
-  };
-}
-
- interface Manager {
-  id: number;
-  adminName: string;
-  months: (MonthData | null)[];
-}
-
- interface ApiResponse {
-  data: {
-    total: {
-      fact: { income: number; activePartners: number };
-      plan: { income: number; activePartners: number };
-    }[];
-    table: Manager[];
-  };
-}
-
-
-const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const App: React.FC = () => {
   const [apiData, setApiData] = useState<ApiResponse | null>(null);
