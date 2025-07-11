@@ -9,13 +9,13 @@ interface MonthData {
   };
 }
 
-interface Manager {
+ interface Manager {
   id: number;
   adminName: string;
   months: (MonthData | null)[];
 }
 
-interface ApiResponse {
+ interface ApiResponse {
   data: {
     total: {
       fact: { income: number; activePartners: number };
@@ -24,6 +24,7 @@ interface ApiResponse {
     table: Manager[];
   };
 }
+
 
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
